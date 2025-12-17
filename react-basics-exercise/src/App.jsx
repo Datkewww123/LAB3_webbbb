@@ -7,7 +7,7 @@ import Counter from './Counter'
 import Login from './Login'
 import Card from './Card';
 import Accordion from './Accordion'
-import TodoApp from './Todoapp'
+import TodoApp from './TodoApp'
 // function App() {
 //   const [count, setCount] = useState(0)
 
