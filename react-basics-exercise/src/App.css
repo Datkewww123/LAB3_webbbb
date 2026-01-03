@@ -1,122 +1,93 @@
-#root {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
-}
-
-.logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-}
-
-.logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-    filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    a:nth-of-type(2) .logo {
-        animation: logo-spin infinite 20s linear;
-    }
-}
-
-.card {
-    padding: 2em;
-}
-
-.read-the-docs {
-    color: #888;
-}
-
+/* Tổng thể trang */
 body {
-    background-color: #f4f6f8;
-    font-family: Arial, sans-serif;
+  background-color: #f4f4f9; 
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+  color: #000000; /* Màu chữ đen toàn trang */
 }
 
-.app-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 25px;
+  width: 100%;
 }
 
-.app-title {
-    text-align: center;
-    margin-bottom: 30px;
+/* Tiêu đề chính */
+h1, h2, h3, h4, p, span, div, li {
+  color: #000000 !important; /* Ép tất cả chữ thành màu đen */
 }
 
-.card {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+/* Định dạng các Card */
+.card, 
+.login-container, 
+.counter-container, 
+.user-profile, 
+.panel-container, 
+.todo-container {
+  background: #ffffff;
+  border: 2px solid #333333; /* Viền đen đậm hơn để rõ nét */
+  border-radius: 12px;
+  padding: 30px;
+  width: 100%;
+  max-width: 450px; /* Khống chế độ rộng để không bị lệch */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Căn giữa mọi thứ trong card */
+  text-align: center;
 }
 
-.profile-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+/* Input và Button cho cân đối */
+input {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #000000; /* Viền input đen */
+  border-radius: 4px;
+  color: #000000;
 }
-
-
-/* UserProfile */
-
-.profile-card {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.profile-avatar {
-    border-radius: 50%;
-    margin: 10px 0;
-}
-
-
-/* Counter */
 
 button {
-    padding: 8px 16px;
-    border: none;
-    border-radius: 6px;
-    background-color: #2563eb;
-    color: white;
-    cursor: pointer;
+  cursor: pointer;
+  background-color: #000000; /* Đổi nút thành màu đen cho ton-sur-ton */
+  color: #ffffff !important; /* Chữ trên nút màu trắng để nổi bật */
+  border: none;
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.2s;
 }
 
 button:hover {
-    background-color: #1d4ed8;
+  background-color: #333333;
 }
 
-
-/* Input */
-
-input {
-    padding: 8px;
-    padding-right: 8px;
-    width: 100%;
-    margin-bottom: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
+/* Fix lỗi lệch của danh sách Todo */
+ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin-top: 15px;
 }
 
-.login-btn {
-    margin-top: 15px;
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+/* Ảnh Hulk */
+img {
+  width: 130px;
+  height: auto;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin: 10px 0;
 }
